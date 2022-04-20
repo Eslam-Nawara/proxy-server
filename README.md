@@ -71,4 +71,4 @@ Use search bar to search for an http site.
 ```  
 **Notes: **
 - Run `./free-port.sh` to get a valid port number.
-- Sites that support http requests are listed in [http_sites](https://github.com/Eslam-Nawara/proxy_server/blob/main/sites)
+- Sites that support http requests are listed in [http_sites](https://github.com/Eslam-Nawara/proxy_server/blob/main/http_sites)

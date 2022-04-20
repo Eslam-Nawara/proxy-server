@@ -47,7 +47,7 @@ memory.
 - `robust_input_output` provides a safe interface to the read and write to the connection sockets.
 - `socket_helpers` This module provides an abstraction to the standard socket interface library that provides a function to connect to the server as a client and another function to listen to clients requests as a server.
 
-## To run the proxy on a linux os use the following commands:
+## To run the proxy on a linux system use the following commands:
 ```
 git clone  
 cd proxy_server  

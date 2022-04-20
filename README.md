@@ -18,16 +18,16 @@ memory.
 - It accepts a connection from the client and invokes a thread to serve that client.
 - Each thread pares the request, checks if the request is valid with a supported version and method and responds with a descriptive error message if invalid.
 - If valid then the proxy searches the cache for the request and responds with the content immediately if cached.
-- If the request is not cached then the proxy connects to the needed server and sends the request and when the response is received it is cached to the memory then sent back to the client.
+- If the request is not cached then the proxy connects to the needed server and sends the request and when the response is received it is cached to the memory and then sent back to the client.
 
 ## What are the code modules?
 - [`proxy.c`](https://github.com/Eslam-Nawara/proxy_server/blob/main/src/proxy.c) contains the main routine as well as the thread function.
-  - The `main` routine perform the following tasks:
+  - The `main` routine performs the following tasks:
     - Open a listening socket to wait for a client request.
     - Initialise the cache.
     - Wait for a client request then invoke the thread function to create a thread to handle every request after accepting the connection.
-  - The `serve_client` function perform the following:
-    - Detache the thread.
+  - The `serve_client` function performs the following:
+    - Detach the thread.
     - Parse the request line received from the client.
     - Serve the client request after validating it.
     - Send back the response to the client.
@@ -49,7 +49,7 @@ memory.
 
 - [`socket_helpers`](https://github.com/Eslam-Nawara/proxy_server/tree/main/src/socket_helpers) This module provides an abstraction to the standard socket interface library that provides a function to connect to the server as a client and another function to listen to clients requests as a server.
 
-## To run the proxy on a linux system use the following commands:
+## To run the proxy on a Linux system use the following commands:
 ```
 git clone  https://github.com/Eslam-Nawara/proxy_server
 cd proxy_server/src
@@ -57,7 +57,7 @@ make
 ./proxy <port number>
 ```
 
-## To connect the the proxy use:
+## To connect the proxy use:
 - Telnet  
 ```
  telnet      localhost <port number>  
@@ -67,7 +67,7 @@ make
 - Connect through the browser  
 ```
 Adjust the browser settings to connect to the proxy  
-Use search bar to search for an http site.
+Use the search bar to search for an http site.
 ```  
 **Notes:**
 - Run `./free-port.sh` to get a valid port number.

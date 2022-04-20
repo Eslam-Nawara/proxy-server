@@ -51,7 +51,7 @@ memory.
 
 ## To run the proxy on a linux system use the following commands:
 ```
-git clone  
+git clone  https://github.com/Eslam-Nawara/proxy_server
 cd proxy_server/src
 make  
 ./proxy <port number>
